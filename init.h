@@ -3,6 +3,53 @@
 #include <math.h>
 #include <string.h>
 
+void area_lines(float bound[][4], float coord[][2], int n){
+
+}
+void minX(float point[2], float coord[][2], int n){
+float m = coord[0][0];
+for(int i=1;i<n;i++){
+printf("\n%f\n",m);
+if(coord[i][0]<m){
+m = coord[i][0];
+point[0] = coord[i][0];
+point[1] = coord[i][1];
+}
+}
+}
+void maxX(float point[2], float coord[][2], int n){
+float m = coord[0][0];
+for(int i=1;i<n;i++){
+if(coord[i][0]>m){
+m = coord[i][0];
+point[0] = coord[i][0];
+point[1] = coord[i][1];
+}
+}
+}
+void minY(float point[2], float coord[][2], int n){
+float m = coord[0][1];
+printf("y%fy", m);
+for(int i=1;i<n;i++){
+printf("\n%f\n",m);
+if(coord[i][1]<m){
+m = coord[i][1];
+point[0] = coord[i][0];
+point[1] = coord[i][1];
+}
+}
+}
+void maxY(float point[2], float coord[][2], int n){
+float m = coord[0][1];
+for(int i=1;i<n;i++){
+if(coord[i][1]>m){
+m = coord[i][1];
+point[0] = coord[i][0];
+point[1] = coord[i][1];
+}
+}
+}
+
 float dist(float x1, float y1, float x2, float y2){
 return sqrt(pow(x1-x2,2)+pow(y1-y2,2));
 }
