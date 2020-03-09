@@ -7,43 +7,40 @@ void area_lines(float bound[][4], float coord[][2], int n){
 
 }
 void minX(float point[2], float coord[][2], int n){
-float m = coord[0][0];
+point[0] = coord[0][0];
+point[1] = coord[0][1];
 for(int i=1;i<n;i++){
-printf("\n%f\n",m);
-if(coord[i][0]<m){
-m = coord[i][0];
+if(coord[i][0]<point[0]){
 point[0] = coord[i][0];
 point[1] = coord[i][1];
 }
 }
 }
 void maxX(float point[2], float coord[][2], int n){
-float m = coord[0][0];
+point[0] = coord[0][0];
+point[1] = coord[0][1];
 for(int i=1;i<n;i++){
-if(coord[i][0]>m){
-m = coord[i][0];
+if(coord[i][0]>point[0]){
 point[0] = coord[i][0];
 point[1] = coord[i][1];
 }
 }
 }
 void minY(float point[2], float coord[][2], int n){
-float m = coord[0][1];
-printf("y%fy", m);
+point[0] = coord[0][0];
+point[1] = coord[0][1];
 for(int i=1;i<n;i++){
-printf("\n%f\n",m);
-if(coord[i][1]<m){
-m = coord[i][1];
+if(coord[i][1]<point[1]){
 point[0] = coord[i][0];
 point[1] = coord[i][1];
 }
 }
 }
 void maxY(float point[2], float coord[][2], int n){
-float m = coord[0][1];
+point[0] = coord[0][0];
+point[1] = coord[0][1];
 for(int i=1;i<n;i++){
-if(coord[i][1]>m){
-m = coord[i][1];
+if(coord[i][1]>point[1]){
 point[0] = coord[i][0];
 point[1] = coord[i][1];
 }
